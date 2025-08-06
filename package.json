@@ -1,7 +1,11 @@
 {
-  "name": "string-utils",
+  "name": "string-utils-galen",
   "version": "1.0.0",
-  "main": "rollup.config.js",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./": "./"
+  },
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

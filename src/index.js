@@ -7,15 +7,15 @@ export function toCamelCase(str) {
       if (+match === 0) return '';
       return index === 0 ? match.toLowerCase() : match.toUpperCase();
     });
-  }
+}
   
-  export function toKebabCase(str) {
+export function toKebabCase(str) {
     return str && str
       .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
       .map(x => x.toLowerCase())
       .join('-');
-  }
+}
   
-  export function truncate(str, length, ellipsis = '...') {
+export function truncate(str, length, ellipsis = '...') {
     return str.length > length ? str.slice(0, length) + ellipsis : str;
-  }
+}
